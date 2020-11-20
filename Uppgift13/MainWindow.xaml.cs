@@ -20,28 +20,28 @@ namespace Uppgift13
     /// </summary>
     public partial class MainWindow : Window
     {
-          
+        
         public MainWindow()
         {
             InitializeComponent();
+
         }
 
         private void countBtn_Click(object sender, RoutedEventArgs e)
         {
             string textInput = txtBox.Text;
-            string character = characterBox.Text;
+            char character = char.Parse(characterBox.Text);
             int counter = 0;
 
             foreach (char letter in textInput)
             {
-                if (letter == textInput[0])
+                if (letter == character)
                 {
                     counter++;
                 }
 
             }
-            
-           
+                      
             resultBox.Text = $"Bokstaven {character} hittades {counter} gånger.";
 
            

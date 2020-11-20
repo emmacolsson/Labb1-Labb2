@@ -24,14 +24,13 @@ namespace Uppgift15
         {
             InitializeComponent();
         }
-
-        int counter = 0;
+     
 
         private void convertButton_Click(object sender, RoutedEventArgs e)
         {
             string textInput = txtBox.Text;
             int vowelsAll = NumberOfVowels(textInput);
-            vowelsBlock.Text = counter.ToString();
+            vowelsBlock.Text = vowelsAll.ToString();
             convertedText.Text = Jibberish(txtBox.Text);
 
         }
@@ -63,6 +62,7 @@ namespace Uppgift15
         }
         private int NumberOfVowels(string textInput)
         {
+            int counter = 0;
             foreach (char letter in textInput)
             {
                 bool ifVowel = IsVowel(letter);

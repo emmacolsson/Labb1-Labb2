@@ -24,6 +24,7 @@ namespace Uppgift9a
         public MainWindow()
         {
             InitializeComponent();
+
         }
 
 

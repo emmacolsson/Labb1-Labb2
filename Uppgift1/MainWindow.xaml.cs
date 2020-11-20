@@ -28,6 +28,7 @@ namespace Uppgift1
         private void BtnMessage_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Du klickade på mig!");
+
         }
     }
 }

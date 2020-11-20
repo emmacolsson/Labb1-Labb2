@@ -13,32 +13,56 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Uppgift5
+namespace HarryPotter
 {
+
+    class Ravenclaw
+    {
+      
+       public string houseGhost;
+       public string mascot;
+       public string password;
+    }
+
+    class Gryffindor
+    {
+        public string houseGhost;
+        public string mascot;
+        public string password;
+
+    }
+
+    class Slytherin
+    {
+        public string houseGhost;
+        public string mascot;
+        public string password;
+
+    }
+    class Hufflepuff
+    {
+        public string houseGhost;
+        public string mascot;
+        public string password;
+
+    }
+
+
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
+        Ravenclaw ravenclaw = new Ravenclaw();
+
+
+
+
+
+
         public MainWindow()
         {
             InitializeComponent();
-        }
-
-        private void btnSum_Click(object sender, RoutedEventArgs e)
-        {
-            int nummer1 = int.Parse(numberOne.Text);
-            int nummer2 = int.Parse(numberTwo.Text);
-            int summa = nummer1 + nummer2;
-            totalSum.Text = Convert.ToString(summa);
-        }
-
-        private void btnClear_Click(object sender, RoutedEventArgs e)
-        {
-            numberOne.Clear();
-            numberTwo.Clear();
-            totalSum.Clear();
-
         }
     }
 }

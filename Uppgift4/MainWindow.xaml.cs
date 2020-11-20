@@ -23,6 +23,7 @@ namespace Uppgift4
         public MainWindow()
         {
             InitializeComponent();
+
         }
 
         private void showPassword_Click(object sender, RoutedEventArgs e)

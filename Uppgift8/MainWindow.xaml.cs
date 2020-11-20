@@ -23,6 +23,7 @@ namespace Uppgift8
         public MainWindow()
         {
             InitializeComponent();
+
         }
 
         private void converter_Click(object sender, RoutedEventArgs e)

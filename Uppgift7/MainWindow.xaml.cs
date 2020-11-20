@@ -23,6 +23,7 @@ namespace Uppgift7
         public MainWindow()
         {
             InitializeComponent();
+
         }
 
         private void btnCount_Click(object sender, RoutedEventArgs e)

@@ -24,7 +24,6 @@ namespace Uppgift12
         int counter = 0;
         double[] numbers = new double[5];
 
-
         public MainWindow()
         {
             InitializeComponent();

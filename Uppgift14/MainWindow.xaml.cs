@@ -25,7 +25,6 @@ namespace Uppgift14
             InitializeComponent();
         }
 
-
         private void btnAge_Click(object sender, RoutedEventArgs e)
         {
 

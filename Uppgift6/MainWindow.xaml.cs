@@ -23,6 +23,7 @@ namespace Uppgift6
         public MainWindow()
         {
             InitializeComponent();
+
         }
 
         private void plus_Click(object sender, RoutedEventArgs e)

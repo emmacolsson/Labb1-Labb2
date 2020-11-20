@@ -20,23 +20,28 @@ namespace Uppgift11
     /// </summary>
     public partial class MainWindow : Window
     {
+        // så att procenten på progressbaren ändras med 5 % om man trycker mer eller mindre otur
         int värde = 5;
-
         public MainWindow()
         {
             InitializeComponent();
 
+            // så att progressbaren börjar på 50 %
             prgBar.Value = 50;
         }
 
         private void lessBtn_Click(object sender, RoutedEventArgs e)
         {
+            // för att progressbarens % ska minska med 5 % vid knapptryck
             prgBar.Value = prgBar.Value - värde;
+
+            // det som visas ovanför progressbaren, dvs tex 45%
             procent.Content = $"{prgBar.Value} %";
         }
 
         private void moreBtn_Click(object sender, RoutedEventArgs e)
         {
+            // för att progressbarens % ska öka med 5 % vid knapptryck
             prgBar.Value = prgBar.Value + värde;
             procent.Content = $"{prgBar.Value} %";
         }
