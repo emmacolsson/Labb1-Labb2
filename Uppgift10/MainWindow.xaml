@@ -1,0 +1,17 @@
+﻿<Window x:Class="Uppgift10.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Uppgift10"
+        mc:Ignorable="d"
+        Title="Gissa talet" Height="450" Width="800">
+    <Grid>
+        <TextBox x:Name="txtBox" HorizontalAlignment="Left" Margin="186,128,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="168" Height="42"/>
+        <Button x:Name="slumpBtn" Content="Slumpa tal" HorizontalAlignment="Left" Margin="380,132,0,0" VerticalAlignment="Top" Height="38" Width="97" Click="slumpBtn_Click"/>
+        <Button x:Name="gissaBtn" Content="Gissa" HorizontalAlignment="Left" Margin="257,193,0,0" VerticalAlignment="Top" Height="38" Width="97" Click="gissaBtn_Click"/>
+        <TextBlock x:Name="txtBlock" HorizontalAlignment="Left" Margin="186,252,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Height="76" Width="168"/>
+        <Label Content="Gissning" HorizontalAlignment="Left" Margin="186,97,0,0" VerticalAlignment="Top" Height="26" Width="84"/>
+
+    </Grid>
+</Window>
