@@ -16,53 +16,24 @@ using System.Windows.Shapes;
 namespace HarryPotter
 {
 
-    class Ravenclaw
-    {
-      
-       public string houseGhost;
-       public string mascot;
-       public string password;
-    }
-
-    class Gryffindor
-    {
-        public string houseGhost;
-        public string mascot;
-        public string password;
-
-    }
-
-    class Slytherin
-    {
-        public string houseGhost;
-        public string mascot;
-        public string password;
-
-    }
-    class Hufflepuff
-    {
-        public string houseGhost;
-        public string mascot;
-        public string password;
-
-    }
-
 
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
-        Ravenclaw ravenclaw = new Ravenclaw();
-
-
-
-
-
+        
 
         public MainWindow()
         {
             InitializeComponent();
+
+            Slytherin slytherin = new Slytherin();
+            Gryffindor gryffindor = new Gryffindor();
+
+            slytherin.PasswordSet(slytherin.Password, "Det bästa lösenordet");
+            gryffindor.PasswordSet(gryffindor.Password, "Yes, det näst bästa lösenordet");
         }
     }
+   
 }
