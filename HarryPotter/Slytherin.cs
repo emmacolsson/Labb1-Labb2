@@ -11,7 +11,7 @@ namespace HarryPotter
             Name = "Slytherin";
             HouseGhost = "Blodige baronen";
             Mascot = "Orm";
-            Password = "Pure-Blood Q";
+            Password = "Slytherin är bäst";
 
         }
 

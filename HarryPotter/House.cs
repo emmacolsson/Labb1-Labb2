@@ -11,8 +11,14 @@ namespace HarryPotter
         public string Mascot { get; set; }
         public string Password { get; set; }
 
-        public List<Wizard> Members = null;
+        public List<Wizard> Members = new List<Wizard>();
+        Wizard wizard = new Wizard();
 
+        public Wizard Wizards (string wizardNew)
+        {
+            Members.Add(new Wizard { Name = wizardNew });
+            return wizard;
+        }
 
         public bool IsVowel(char character)
         {
@@ -29,7 +35,6 @@ namespace HarryPotter
                 }
             }
             return theVowels;
-
         }
 
         public bool IsKonsonant(char character)
@@ -47,7 +52,6 @@ namespace HarryPotter
                 }
             }
             return theKonsonants;
-
         }
 
         public virtual bool LetterCount(string passwordChange)
@@ -69,7 +73,6 @@ namespace HarryPotter
 
             }
             return amountRight;
-
         }
 
         public virtual bool PasswordCheck(string changePassword)
@@ -103,6 +106,11 @@ namespace HarryPotter
             }
 
             return changedPassword;
+        }
+
+        public override string ToString()
+        {
+            return this.GetType().Name;
         }
     }
 }
