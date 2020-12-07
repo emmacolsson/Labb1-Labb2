@@ -44,22 +44,22 @@ namespace HarryPotter
 
         private void btnChangePassword_Click(object sender, RoutedEventArgs e)
         {
-            if (cboHouses.SelectedItem == hogwarts.Hufflepuff && txtOldPassword.Text == hogwarts.Hufflepuff.Password && hogwarts.Hufflepuff.PasswordCheck(txtNewPassword.Text) == true)
+            if (cboHouses.SelectedItem == hogwarts.Hufflepuff && hogwarts.Hufflepuff.PasswordSet(txtOldPassword.Text, txtNewPassword.Text) == true)
             {
                 hogwarts.Hufflepuff.Password = txtNewPassword.Text;
                 MessageBox.Show("Ditt lösenord har ändrats!");
             }
-            else if (cboHouses.SelectedItem == hogwarts.Gryffindor && txtOldPassword.Text == hogwarts.Gryffindor.Password && hogwarts.Gryffindor.PasswordCheck(txtNewPassword.Text) == true)
+            else if (cboHouses.SelectedItem == hogwarts.Gryffindor && hogwarts.Gryffindor.PasswordSet(txtOldPassword.Text, txtNewPassword.Text) == true)
             {
                 hogwarts.Gryffindor.Password = txtNewPassword.Text;
                 MessageBox.Show("Ditt lösenord har ändrats!");
             }
-            else if (cboHouses.SelectedItem == hogwarts.Ravenclaw && txtOldPassword.Text == hogwarts.Ravenclaw.Password && hogwarts.Ravenclaw.PasswordCheck(txtNewPassword.Text) == true)
+            else if (cboHouses.SelectedItem == hogwarts.Ravenclaw && hogwarts.Ravenclaw.PasswordSet(txtOldPassword.Text, txtNewPassword.Text) == true)
             {
                 hogwarts.Ravenclaw.Password = txtNewPassword.Text;
                 MessageBox.Show("Ditt lösenord har ändrats!");
             }
-            else if (cboHouses.SelectedItem == hogwarts.Slytherin && txtOldPassword.Text == hogwarts.Slytherin.Password && hogwarts.Slytherin.PasswordCheck(txtNewPassword.Text) == true)
+            else if (cboHouses.SelectedItem == hogwarts.Slytherin && hogwarts.Slytherin.PasswordSet(txtOldPassword.Text, txtNewPassword.Text) == true)
             {
                 hogwarts.Slytherin.Password = txtNewPassword.Text;
                 MessageBox.Show("Ditt lösenord har ändrats!");

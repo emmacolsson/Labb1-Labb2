@@ -20,7 +20,7 @@ namespace Godiskalkylatorn
     /// </summary>
     public partial class MainWindow : Window
     {
-        CandyCalculator candycalculator = new CandyCalculator();
+        CandyCalculator candycalculator = new CandyCalculator();  //skapar nytt objekt av klassen CandyCalculator
         public string filename = "Godiskalkylatorn.json";
 
         public MainWindow()
@@ -30,18 +30,18 @@ namespace Godiskalkylatorn
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
-            Person person = new Person(txtBoxFirstName.Text, txtBoxLastName.Text, int.Parse(txtBoxAge.Text));
-            CandyCalculator.PersonList.Add(person);
-            listBox.ItemsSource = CandyCalculator.PersonList;
-            listBox.Items.Refresh();
-            FileHandler.Save(CandyCalculator.PersonList, filename);
+            Person person = new Person(txtBoxFirstName.Text, txtBoxLastName.Text, int.Parse(txtBoxAge.Text)); //skapar ett nytt object av klassen Person, hänger ihop med contstructorn i Person-klassen
+            CandyCalculator.PersonList.Add(person); //Kalla på listan i Candycalcultor-klassen
+            listBox.ItemsSource = CandyCalculator.PersonList; //presenterar de tillagda personerna i listboxen
+            listBox.Items.Refresh(); 
+            FileHandler.Save(CandyCalculator.PersonList, filename); //spara personen man lagt till i filename, hör ihop med klassen FileHandler
         }
 
         private void btnDistribution_Click(object sender, RoutedEventArgs e)
         {
-            if (btnFirstName.IsChecked == true)
-            {
-                candycalculator.CandyDistributionFirstName(int.Parse(boxCandy.Text));
+            if (btnFirstName.IsChecked == true)  //ifsats för att kontrollera om firstname, lastname eller age är iklickad, och fördela enligt det
+            { 
+                candycalculator.CandyDistributionFirstName(int.Parse(boxCandy.Text)); //hämtar information från metoderna i Candycalculator-klassen
                 listBox.ItemsSource = CandyCalculator.PersonList;
             }
             else if (btnLastName.IsChecked == true)
@@ -58,7 +58,7 @@ namespace Godiskalkylatorn
 
         private void btnSaved_Click(object sender, RoutedEventArgs e)
         {
-            CandyCalculator.SaveName(filename);
+            CandyCalculator.SaveName(filename);  //hämtar alla sparade personer klassen CandyCalculator i klassen SaveName som har inparametern string filename
             listBox.ItemsSource = null;
             listBox.ItemsSource = CandyCalculator.PersonList;
         }

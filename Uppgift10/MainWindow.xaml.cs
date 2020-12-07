@@ -34,6 +34,7 @@ namespace Uppgift10
             gissaBtn.IsEnabled = false;
         }
 
+
         private void slumpBtn_Click(object sender, RoutedEventArgs e)
         {          
             //Next-metoden slumpar fram ett tal mellan 0 och upptill maxvärde, i detta fall 1000.
